@@ -1,0 +1,39 @@
+{
+  "title": "Lenovo Windows Croatian behavior",
+  "rules": [
+    {
+      "description": "Swap left Control and left Command so physical Ctrl behaves like Windows Ctrl",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "left_control", "modifiers": { "optional": ["any"] } },
+          "to": [ { "key_code": "left_command" } ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "left_command", "modifiers": { "optional": ["any"] } },
+          "to": [ { "key_code": "left_control" } ]
+        }
+      ]
+    },
+    {
+      "description": "Swap right Control and right Command to keep bottom row symmetric",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "right_control", "modifiers": { "optional": ["any"] } },
+          "to": [ { "key_code": "right_command" } ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "right_command", "modifiers": { "optional": ["any"] } },
+          "to": [ { "key_code": "right_control" } ]
+        }
+      ]
+    },
+    {
+      "description": "Optional: make Command+grave behave like Windows Alt+Tab muscle memory anchor is untouched",
+      "manipulators": []
+    }
+  ]
+}
